@@ -1,0 +1,17 @@
+=== module source resolved by init ===
+[0m[1mInitializing modules...[0m
+
+=== plan summary ===
+  # module.vpc.aws_internet_gateway.main will be created
+  # module.vpc.aws_route_table.private[0] will be created
+  # module.vpc.aws_route_table.public will be created
+  # module.vpc.aws_route_table_association.private[0] will be created
+  # module.vpc.aws_route_table_association.private[1] will be created
+  # module.vpc.aws_route_table_association.public[0] will be created
+  # module.vpc.aws_route_table_association.public[1] will be created
+  # module.vpc.aws_subnet.private[0] will be created
+  # module.vpc.aws_subnet.private[1] will be created
+  # module.vpc.aws_subnet.public[0] will be created
+  # module.vpc.aws_subnet.public[1] will be created
+  # module.vpc.aws_vpc.main will be created
+Plan: 12 to add, 0 to change, 0 to destroy.

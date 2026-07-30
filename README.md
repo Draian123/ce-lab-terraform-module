@@ -230,8 +230,15 @@ module "vpc" {
 }
 ```
 
-`terraform init` in that directory clones the module from the tag, and `terraform plan` produces a
-clean 11-resource plan — the module works as a versioned, externally consumable artifact.
+`terraform init` in that directory resolves the source to
+`git::https://github.com/Draian123/ce-lab-terraform-module.git//modules/vpc?ref=v1.0.0` and
+`terraform plan` produces a clean `Plan: 12 to add` — the module works as a versioned, externally
+consumable artifact (`logs/08-git-sourced-module-example.log`).
+
+This example is also what proves the route-table index fix: with `enable_nat_gateway = false` both
+private subnets associate to the single shared route table. The lab's original snippet would have
+tried to index `aws_route_table.private[1]` in a list of length 1 and failed at plan time.
+
 Note the lab snippet passes `environment = "test"`, which the module's own validation correctly
 rejects (allowed: `dev`, `staging`, `prod`); the example uses `dev`.
 

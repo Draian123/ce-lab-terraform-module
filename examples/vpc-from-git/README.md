@@ -19,8 +19,14 @@ terraform plan
 ```
 
 `enable_nat_gateway = false`, so applying this example creates only free resources (VPC, 4 subnets,
-IGW, route tables and associations — 11 in total). The private subnets have no default route,
+IGW, 2 route tables, 4 associations — 12 in total). The private subnets have no default route,
 which is the intended "fully isolated" shape.
+
+`terraform init` reports the resolved source in `.terraform/modules/modules.json`:
+
+```json
+{"Key":"vpc","Source":"git::https://github.com/Draian123/ce-lab-terraform-module.git//modules/vpc?ref=v1.0.0"}
+```
 
 ## Note on `environment`
 
