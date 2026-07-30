@@ -1,0 +1,41 @@
+=== http://3.92.128.194 ===
+  waiting for boot (1)...
+<!DOCTYPE html>
+<html>
+  <head><title>ironhack-web-dev</title></head>
+  <body>
+    <h1>Hello from the DEV web server!</h1>
+    <p>Environment: <strong>dev</strong></p>
+    <p>Server: <strong>ironhack-web-dev</strong> (node 1 of 1)</p>
+    <p>Instance ID: <strong>i-075892a77cb40b2ec</strong></p>
+    <p>Availability Zone: <strong>us-east-1c</strong></p>
+    <p>Provisioned by the <em>web-server</em> Terraform module.</p>
+  </body>
+</html>
+=== http://23.22.168.44 ===
+<!DOCTYPE html>
+<html>
+  <head><title>ironhack-web-prod</title></head>
+  <body>
+    <h1>Hello from the PROD web server!</h1>
+    <p>Environment: <strong>prod</strong></p>
+    <p>Server: <strong>ironhack-web-prod</strong> (node 1 of 2)</p>
+    <p>Instance ID: <strong>i-0f08aad6fc6d3c75c</strong></p>
+    <p>Availability Zone: <strong>us-east-1c</strong></p>
+    <p>Provisioned by the <em>web-server</em> Terraform module.</p>
+  </body>
+</html>
+=== http://34.227.74.133 ===
+  waiting for boot (1)...
+<!DOCTYPE html>
+<html>
+  <head><title>ironhack-web-prod</title></head>
+  <body>
+    <h1>Hello from the PROD web server!</h1>
+    <p>Environment: <strong>prod</strong></p>
+    <p>Server: <strong>ironhack-web-prod</strong> (node 2 of 2)</p>
+    <p>Instance ID: <strong>i-0a84563d8e0dc8a97</strong></p>
+    <p>Availability Zone: <strong>us-east-1b</strong></p>
+    <p>Provisioned by the <em>web-server</em> Terraform module.</p>
+  </body>
+</html>

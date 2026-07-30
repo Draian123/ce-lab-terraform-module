@@ -1,0 +1,25 @@
+=== Route tables in vpc-0babc9b9892a5f426 ===
+-------------------------------------------------------------------------------------------------------------------------
+|                                                  DescribeRouteTables                                                  |
++-----------------------+---------------------------------+------------------------+------------------------+-----------+
+|          Igw          |              Name               |          Nat           |         RtbId          |  Subnets  |
++-----------------------+---------------------------------+------------------------+------------------------+-----------+
+|  None                 |  ironhack-vpc-dev-private-rt-1  |  nat-0d8fc0b7086636cf0 |  rtb-09641fec7920becb4 |  2        |
+|  igw-07c2214cf71caad64|  ironhack-vpc-dev-public-rt     |  None                  |  rtb-0c46c6863893d00d9 |  2        |
++-----------------------+---------------------------------+------------------------+------------------------+-----------+
+=== Route tables in vpc-04d4762f9a3362fc4 ===
+--------------------------------------------------------------------------------------------------------------------------
+|                                                   DescribeRouteTables                                                  |
++-----------------------+----------------------------------+------------------------+------------------------+-----------+
+|          Igw          |              Name                |          Nat           |         RtbId          |  Subnets  |
++-----------------------+----------------------------------+------------------------+------------------------+-----------+
+|  None                 |  ironhack-vpc-prod-private-rt-1  |  nat-025d6f80cc2a07017 |  rtb-005bb590ee7b32685 |  1        |
+|  None                 |  ironhack-vpc-prod-private-rt-2  |  nat-0e90ece2ff4b1bb22 |  rtb-031f2ea290cb82a9d |  1        |
+|  igw-02deb94d57808fce2|  ironhack-vpc-prod-public-rt     |  None                  |  rtb-0fd702ffe34df6764 |  2        |
++-----------------------+----------------------------------+------------------------+------------------------+-----------+
+=== AZ-locality check: prod private subnet -> route table -> NAT subnet AZ ===
+prod private subnet-09c449d1a5f0c2c3f (us-east-1a) -> nat-025d6f80cc2a07017 (in us-east-1a)  => same-AZ: YES
+prod private subnet-02b5de4d21a074e67 (us-east-1b) -> nat-0e90ece2ff4b1bb22 (in us-east-1b)  => same-AZ: YES
+=== dev: both private subnets share ONE NAT (single_nat_gateway = true) ===
+dev private subnet-04de856ad32ba7673 (us-east-1a) -> nat-0d8fc0b7086636cf0
+dev private subnet-02696d059a3679365 (us-east-1b) -> nat-0d8fc0b7086636cf0

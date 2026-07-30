@@ -1,0 +1,6 @@
+=== terraform fmt -recursive ===
+(no output above = every file already canonically formatted)
+
+=== terraform validate ===
+[32m[1mSuccess![0m The configuration is valid.
+[0m

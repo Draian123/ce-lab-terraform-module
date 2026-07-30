@@ -1,0 +1,15 @@
+# Provider plugins and local state — never committed.
+# .terraform.lock.hcl IS committed on purpose so provider versions are reproducible.
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Saved binary plan files.
+tfplan
+*.tfplan
+
+*.tfvars
+!example.tfvars
+.terraformrc
+terraform.rc

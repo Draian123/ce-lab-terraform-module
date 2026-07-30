@@ -1,0 +1,101 @@
+=== terraform output ===
+all_environments = {
+  "dev" = {
+    "availability_zones" = tolist([
+      "us-east-1a",
+      "us-east-1b",
+    ])
+    "environment" = "dev"
+    "nat_gateways" = 1
+    "nat_mode" = "single"
+    "private_subnets" = 2
+    "public_subnets" = 2
+    "vpc_cidr" = "10.0.0.0/16"
+    "vpc_id" = "vpc-0babc9b9892a5f426"
+  }
+  "prod" = {
+    "availability_zones" = tolist([
+      "us-east-1a",
+      "us-east-1b",
+    ])
+    "environment" = "prod"
+    "nat_gateways" = 2
+    "nat_mode" = "multi-az"
+    "private_subnets" = 2
+    "public_subnets" = 2
+    "vpc_cidr" = "10.1.0.0/16"
+    "vpc_id" = "vpc-04d4762f9a3362fc4"
+  }
+}
+dev_internet_gateway_id = "igw-07c2214cf71caad64"
+dev_nat_gateway_ids = [
+  "nat-0d8fc0b7086636cf0",
+]
+dev_private_route_table_ids = [
+  "rtb-09641fec7920becb4",
+]
+dev_private_subnets = [
+  "subnet-04de856ad32ba7673",
+  "subnet-02696d059a3679365",
+]
+dev_public_subnets = [
+  "subnet-07e15a01089d90451",
+  "subnet-038b69e438ff2e9b6",
+]
+dev_vpc_cidr = "10.0.0.0/16"
+dev_vpc_id = "vpc-0babc9b9892a5f426"
+prod_internet_gateway_id = "igw-02deb94d57808fce2"
+prod_nat_gateway_ids = [
+  "nat-025d6f80cc2a07017",
+  "nat-0e90ece2ff4b1bb22",
+]
+prod_private_route_table_ids = [
+  "rtb-005bb590ee7b32685",
+  "rtb-031f2ea290cb82a9d",
+]
+prod_private_subnets = [
+  "subnet-09c449d1a5f0c2c3f",
+  "subnet-02b5de4d21a074e67",
+]
+prod_public_subnets = [
+  "subnet-0a9fdd590dd7d3c3e",
+  "subnet-07964837d6ff62f7e",
+]
+prod_vpc_cidr = "10.1.0.0/16"
+prod_vpc_id = "vpc-04d4762f9a3362fc4"
+
+=== state resource count ===
+31
+
+=== state list ===
+module.vpc_dev.aws_eip.nat[0]
+module.vpc_dev.aws_internet_gateway.main
+module.vpc_dev.aws_nat_gateway.main[0]
+module.vpc_dev.aws_route_table.private[0]
+module.vpc_dev.aws_route_table.public
+module.vpc_dev.aws_route_table_association.private[0]
+module.vpc_dev.aws_route_table_association.private[1]
+module.vpc_dev.aws_route_table_association.public[0]
+module.vpc_dev.aws_route_table_association.public[1]
+module.vpc_dev.aws_subnet.private[0]
+module.vpc_dev.aws_subnet.private[1]
+module.vpc_dev.aws_subnet.public[0]
+module.vpc_dev.aws_subnet.public[1]
+module.vpc_dev.aws_vpc.main
+module.vpc_prod.aws_eip.nat[0]
+module.vpc_prod.aws_eip.nat[1]
+module.vpc_prod.aws_internet_gateway.main
+module.vpc_prod.aws_nat_gateway.main[0]
+module.vpc_prod.aws_nat_gateway.main[1]
+module.vpc_prod.aws_route_table.private[0]
+module.vpc_prod.aws_route_table.private[1]
+module.vpc_prod.aws_route_table.public
+module.vpc_prod.aws_route_table_association.private[0]
+module.vpc_prod.aws_route_table_association.private[1]
+module.vpc_prod.aws_route_table_association.public[0]
+module.vpc_prod.aws_route_table_association.public[1]
+module.vpc_prod.aws_subnet.private[0]
+module.vpc_prod.aws_subnet.private[1]
+module.vpc_prod.aws_subnet.public[0]
+module.vpc_prod.aws_subnet.public[1]
+module.vpc_prod.aws_vpc.main

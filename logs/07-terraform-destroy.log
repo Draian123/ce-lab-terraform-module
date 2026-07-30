@@ -1,0 +1,1002 @@
+[0m[1mmodule.vpc_prod.aws_vpc.main: Refreshing state... [id=vpc-04d4762f9a3362fc4][0m
+[0m[1mmodule.vpc_dev.aws_vpc.main: Refreshing state... [id=vpc-0babc9b9892a5f426][0m
+[0m[1mmodule.vpc_dev.aws_internet_gateway.main: Refreshing state... [id=igw-07c2214cf71caad64][0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[1]: Refreshing state... [id=subnet-038b69e438ff2e9b6][0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[1]: Refreshing state... [id=subnet-02696d059a3679365][0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[0]: Refreshing state... [id=subnet-07e15a01089d90451][0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[0]: Refreshing state... [id=subnet-04de856ad32ba7673][0m
+[0m[1mmodule.vpc_prod.aws_internet_gateway.main: Refreshing state... [id=igw-02deb94d57808fce2][0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[0]: Refreshing state... [id=subnet-0a9fdd590dd7d3c3e][0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[1]: Refreshing state... [id=subnet-07964837d6ff62f7e][0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[0]: Refreshing state... [id=subnet-09c449d1a5f0c2c3f][0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[1]: Refreshing state... [id=subnet-02b5de4d21a074e67][0m
+[0m[1mmodule.vpc_dev.aws_route_table.public: Refreshing state... [id=rtb-0c46c6863893d00d9][0m
+[0m[1mmodule.vpc_dev.aws_eip.nat[0]: Refreshing state... [id=eipalloc-01e757084ec9bfa4b][0m
+[0m[1mmodule.vpc_prod.aws_route_table.public: Refreshing state... [id=rtb-0fd702ffe34df6764][0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[0]: Refreshing state... [id=eipalloc-088094c851d469dfc][0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[1]: Refreshing state... [id=eipalloc-0886959edfba6e55b][0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-08a225f27ecc98847][0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0687f6c1a5b049f91][0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0df6373d428416275][0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-00c3165741420f1d6][0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Refreshing state... [id=nat-0d8fc0b7086636cf0][0m
+[0m[1mmodule.vpc_dev.aws_route_table.private[0]: Refreshing state... [id=rtb-09641fec7920becb4][0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0983bf230eb480d52][0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0091599bc0679dbf7][0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Refreshing state... [id=nat-025d6f80cc2a07017][0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Refreshing state... [id=nat-0e90ece2ff4b1bb22][0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[1]: Refreshing state... [id=rtb-031f2ea290cb82a9d][0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[0]: Refreshing state... [id=rtb-005bb590ee7b32685][0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-02e1ff080cf5549f2][0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0db0e2d734373f5cc][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.vpc_dev.aws_eip.nat[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_eip" "nat" {
+      [31m-[0m[0m allocation_id            = "eipalloc-01e757084ec9bfa4b" [90m-> null[0m[0m
+      [31m-[0m[0m arn                      = "arn:aws:ec2:us-east-1:697345203222:elastic-ip/eipalloc-01e757084ec9bfa4b" [90m-> null[0m[0m
+      [31m-[0m[0m association_id           = "eipassoc-00ef1f7a23db3582e" [90m-> null[0m[0m
+      [31m-[0m[0m domain                   = "vpc" [90m-> null[0m[0m
+      [31m-[0m[0m id                       = "eipalloc-01e757084ec9bfa4b" [90m-> null[0m[0m
+      [31m-[0m[0m network_border_group     = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface        = "eni-053dfe19511fad1ea" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns              = "ip-10-0-1-76.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip               = "10.0.1.76" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns               = "ec2-13-223-201-37.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                = "13.223.201.37" [90m-> null[0m[0m
+      [31m-[0m[0m public_ipv4_pool         = "amazon" [90m-> null[0m[0m
+      [31m-[0m[0m tags                     = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-nat-eip-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                 = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-nat-eip-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc                      = true [90m-> null[0m[0m
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:697345203222:internet-gateway/igw-07c2214cf71caad64" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-07c2214cf71caad64" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-igw"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-igw"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_nat_gateway.main[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_nat_gateway" "main" {
+      [31m-[0m[0m allocation_id                      = "eipalloc-01e757084ec9bfa4b" [90m-> null[0m[0m
+      [31m-[0m[0m association_id                     = "eipassoc-00ef1f7a23db3582e" [90m-> null[0m[0m
+      [31m-[0m[0m connectivity_type                  = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id                                 = "nat-0d8fc0b7086636cf0" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface_id               = "eni-053dfe19511fad1ea" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                         = "10.0.1.76" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                          = "13.223.201.37" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_allocation_ids           = [] [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_address_count = 0 [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_addresses     = [] [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                          = "subnet-07e15a01089d90451" [90m-> null[0m[0m
+      [31m-[0m[0m tags                               = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-nat-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-nat-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "private" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:697345203222:route-table/rtb-09641fec7920becb4" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-09641fec7920becb4" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m nat_gateway_id             = "nat-0d8fc0b7086636cf0"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-rt-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-rt-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:697345203222:route-table/rtb-0c46c6863893d00d9" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0c46c6863893d00d9" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-07c2214cf71caad64"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-rt"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-rt"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table_association.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-0983bf230eb480d52" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-09641fec7920becb4" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-04de856ad32ba7673" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table_association.private[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-0091599bc0679dbf7" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-09641fec7920becb4" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-02696d059a3679365" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table_association.public[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-08a225f27ecc98847" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0c46c6863893d00d9" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-07e15a01089d90451" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_route_table_association.public[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0687f6c1a5b049f91" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0c46c6863893d00d9" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-038b69e438ff2e9b6" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_subnet.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-04de856ad32ba7673" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.11.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-04de856ad32ba7673" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_subnet.private[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-02696d059a3679365" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.12.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-02696d059a3679365" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-2"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-private-2"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_subnet.public[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-07e15a01089d90451" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-07e15a01089d90451" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-1"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_subnet.public[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-038b69e438ff2e9b6" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-038b69e438ff2e9b6" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-2"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-public-2"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_dev.aws_vpc.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:697345203222:vpc/vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.0.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-01ea82cd230be4977" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-068f7cc07a84a31c0" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-08535b6e5097a87c0" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-0a5c577c1bb52b873" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-068f7cc07a84a31c0" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-vpc"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-dev-vpc"
+          [31m-[0m[0m "Owner"       = "DevTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_eip.nat[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_eip" "nat" {
+      [31m-[0m[0m allocation_id            = "eipalloc-088094c851d469dfc" [90m-> null[0m[0m
+      [31m-[0m[0m arn                      = "arn:aws:ec2:us-east-1:697345203222:elastic-ip/eipalloc-088094c851d469dfc" [90m-> null[0m[0m
+      [31m-[0m[0m association_id           = "eipassoc-07485c700ddc6d4a2" [90m-> null[0m[0m
+      [31m-[0m[0m domain                   = "vpc" [90m-> null[0m[0m
+      [31m-[0m[0m id                       = "eipalloc-088094c851d469dfc" [90m-> null[0m[0m
+      [31m-[0m[0m network_border_group     = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface        = "eni-0e90e27c0b4228904" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns              = "ip-10-1-1-208.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip               = "10.1.1.208" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns               = "ec2-34-225-36-178.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                = "34.225.36.178" [90m-> null[0m[0m
+      [31m-[0m[0m public_ipv4_pool         = "amazon" [90m-> null[0m[0m
+      [31m-[0m[0m tags                     = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-eip-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                 = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-eip-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc                      = true [90m-> null[0m[0m
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_eip.nat[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_eip" "nat" {
+      [31m-[0m[0m allocation_id            = "eipalloc-0886959edfba6e55b" [90m-> null[0m[0m
+      [31m-[0m[0m arn                      = "arn:aws:ec2:us-east-1:697345203222:elastic-ip/eipalloc-0886959edfba6e55b" [90m-> null[0m[0m
+      [31m-[0m[0m association_id           = "eipassoc-063fa422ec1f14533" [90m-> null[0m[0m
+      [31m-[0m[0m domain                   = "vpc" [90m-> null[0m[0m
+      [31m-[0m[0m id                       = "eipalloc-0886959edfba6e55b" [90m-> null[0m[0m
+      [31m-[0m[0m network_border_group     = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface        = "eni-0a4c4e0e918e267a7" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns              = "ip-10-1-2-130.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip               = "10.1.2.130" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns               = "ec2-100-55-108-186.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                = "100.55.108.186" [90m-> null[0m[0m
+      [31m-[0m[0m public_ipv4_pool         = "amazon" [90m-> null[0m[0m
+      [31m-[0m[0m tags                     = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-eip-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                 = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-eip-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc                      = true [90m-> null[0m[0m
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:697345203222:internet-gateway/igw-02deb94d57808fce2" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-02deb94d57808fce2" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-igw"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-igw"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_nat_gateway.main[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_nat_gateway" "main" {
+      [31m-[0m[0m allocation_id                      = "eipalloc-088094c851d469dfc" [90m-> null[0m[0m
+      [31m-[0m[0m association_id                     = "eipassoc-07485c700ddc6d4a2" [90m-> null[0m[0m
+      [31m-[0m[0m connectivity_type                  = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id                                 = "nat-025d6f80cc2a07017" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface_id               = "eni-0e90e27c0b4228904" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                         = "10.1.1.208" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                          = "34.225.36.178" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_allocation_ids           = [] [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_address_count = 0 [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_addresses     = [] [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                          = "subnet-0a9fdd590dd7d3c3e" [90m-> null[0m[0m
+      [31m-[0m[0m tags                               = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_nat_gateway.main[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_nat_gateway" "main" {
+      [31m-[0m[0m allocation_id                      = "eipalloc-0886959edfba6e55b" [90m-> null[0m[0m
+      [31m-[0m[0m association_id                     = "eipassoc-063fa422ec1f14533" [90m-> null[0m[0m
+      [31m-[0m[0m connectivity_type                  = "public" [90m-> null[0m[0m
+      [31m-[0m[0m id                                 = "nat-0e90ece2ff4b1bb22" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface_id               = "eni-0a4c4e0e918e267a7" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                         = "10.1.2.130" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                          = "100.55.108.186" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_allocation_ids           = [] [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_address_count = 0 [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ip_addresses     = [] [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                          = "subnet-07964837d6ff62f7e" [90m-> null[0m[0m
+      [31m-[0m[0m tags                               = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-nat-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "private" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:697345203222:route-table/rtb-005bb590ee7b32685" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-005bb590ee7b32685" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m nat_gateway_id             = "nat-025d6f80cc2a07017"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-rt-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-rt-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table.private[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "private" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:697345203222:route-table/rtb-031f2ea290cb82a9d" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-031f2ea290cb82a9d" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m nat_gateway_id             = "nat-0e90ece2ff4b1bb22"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-rt-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-rt-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:697345203222:route-table/rtb-0fd702ffe34df6764" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0fd702ffe34df6764" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-02deb94d57808fce2"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-rt"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-rt"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table_association.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-02e1ff080cf5549f2" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-005bb590ee7b32685" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-09c449d1a5f0c2c3f" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table_association.private[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private" {
+      [31m-[0m[0m id             = "rtbassoc-0db0e2d734373f5cc" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-031f2ea290cb82a9d" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-02b5de4d21a074e67" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table_association.public[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-00c3165741420f1d6" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0fd702ffe34df6764" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0a9fdd590dd7d3c3e" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_route_table_association.public[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0df6373d428416275" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0fd702ffe34df6764" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-07964837d6ff62f7e" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_subnet.private[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-09c449d1a5f0c2c3f" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.1.11.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-09c449d1a5f0c2c3f" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_subnet.private[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-02b5de4d21a074e67" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.1.12.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-02b5de4d21a074e67" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-private-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Private"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_subnet.public[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-0a9fdd590dd7d3c3e" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.1.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0a9fdd590dd7d3c3e" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-1"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_subnet.public[1][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:697345203222:subnet/subnet-07964837d6ff62f7e" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.1.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-07964837d6ff62f7e" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-public-2"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+          [31m-[0m[0m "Tier"        = "Public"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc_prod.aws_vpc.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:697345203222:vpc/vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.1.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-07f9c4b9ed6d060c1" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-0db7b7ad227189798" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-092ceb9bb7e904063" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-0a5c577c1bb52b873" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-0db7b7ad227189798" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "697345203222" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-vpc"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Compliance"  = "SOC2"
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "Lab"         = "M4.05-create-your-first-terraform-module"
+          [31m-[0m[0m "ManagedBy"   = "Terraform"
+          [31m-[0m[0m "Name"        = "ironhack-vpc-prod-vpc"
+          [31m-[0m[0m "Owner"       = "PlatformTeam"
+          [31m-[0m[0m "Project"     = "ironhack-vpc"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 0 to change, 31 to destroy.
+
+Changes to Outputs:
+  [31m-[0m[0m all_environments             = {
+      [31m-[0m[0m dev  = {
+          [31m-[0m[0m availability_zones = [
+              [31m-[0m[0m "us-east-1a",
+              [31m-[0m[0m "us-east-1b",
+            ]
+          [31m-[0m[0m environment        = "dev"
+          [31m-[0m[0m nat_gateways       = 1
+          [31m-[0m[0m nat_mode           = "single"
+          [31m-[0m[0m private_subnets    = 2
+          [31m-[0m[0m public_subnets     = 2
+          [31m-[0m[0m vpc_cidr           = "10.0.0.0/16"
+          [31m-[0m[0m vpc_id             = "vpc-0babc9b9892a5f426"
+        }
+      [31m-[0m[0m prod = {
+          [31m-[0m[0m availability_zones = [
+              [31m-[0m[0m "us-east-1a",
+              [31m-[0m[0m "us-east-1b",
+            ]
+          [31m-[0m[0m environment        = "prod"
+          [31m-[0m[0m nat_gateways       = 2
+          [31m-[0m[0m nat_mode           = "multi-az"
+          [31m-[0m[0m private_subnets    = 2
+          [31m-[0m[0m public_subnets     = 2
+          [31m-[0m[0m vpc_cidr           = "10.1.0.0/16"
+          [31m-[0m[0m vpc_id             = "vpc-04d4762f9a3362fc4"
+        }
+    } [90m-> null[0m[0m
+  [31m-[0m[0m dev_internet_gateway_id      = "igw-07c2214cf71caad64" [90m-> null[0m[0m
+  [31m-[0m[0m dev_nat_gateway_ids          = [
+      [31m-[0m[0m "nat-0d8fc0b7086636cf0",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m dev_private_route_table_ids  = [
+      [31m-[0m[0m "rtb-09641fec7920becb4",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m dev_private_subnets          = [
+      [31m-[0m[0m "subnet-04de856ad32ba7673",
+      [31m-[0m[0m "subnet-02696d059a3679365",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m dev_public_subnets           = [
+      [31m-[0m[0m "subnet-07e15a01089d90451",
+      [31m-[0m[0m "subnet-038b69e438ff2e9b6",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m dev_vpc_cidr                 = "10.0.0.0/16" [90m-> null[0m[0m
+  [31m-[0m[0m dev_vpc_id                   = "vpc-0babc9b9892a5f426" [90m-> null[0m[0m
+  [31m-[0m[0m prod_internet_gateway_id     = "igw-02deb94d57808fce2" [90m-> null[0m[0m
+  [31m-[0m[0m prod_nat_gateway_ids         = [
+      [31m-[0m[0m "nat-025d6f80cc2a07017",
+      [31m-[0m[0m "nat-0e90ece2ff4b1bb22",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m prod_private_route_table_ids = [
+      [31m-[0m[0m "rtb-005bb590ee7b32685",
+      [31m-[0m[0m "rtb-031f2ea290cb82a9d",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m prod_private_subnets         = [
+      [31m-[0m[0m "subnet-09c449d1a5f0c2c3f",
+      [31m-[0m[0m "subnet-02b5de4d21a074e67",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m prod_public_subnets          = [
+      [31m-[0m[0m "subnet-0a9fdd590dd7d3c3e",
+      [31m-[0m[0m "subnet-07964837d6ff62f7e",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m prod_vpc_cidr                = "10.1.0.0/16" [90m-> null[0m[0m
+  [31m-[0m[0m prod_vpc_id                  = "vpc-04d4762f9a3362fc4" [90m-> null[0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-00c3165741420f1d6][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-0983bf230eb480d52][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-02e1ff080cf5549f2][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-0df6373d428416275][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-08a225f27ecc98847][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-0db0e2d734373f5cc][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-0091599bc0679dbf7][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-0687f6c1a5b049f91][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.public[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table.public: Destroying... [id=rtb-0c46c6863893d00d9][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.public[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table_association.private[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[1]: Destroying... [id=rtb-031f2ea290cb82a9d][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table.public: Destroying... [id=rtb-0fd702ffe34df6764][0m[0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[0]: Destroying... [id=rtb-005bb590ee7b32685][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[0]: Destroying... [id=subnet-09c449d1a5f0c2c3f][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[1]: Destroying... [id=subnet-02b5de4d21a074e67][0m[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table_association.private[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table.private[0]: Destroying... [id=rtb-09641fec7920becb4][0m[0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[0]: Destroying... [id=subnet-04de856ad32ba7673][0m[0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[1]: Destroying... [id=subnet-02696d059a3679365][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_subnet.private[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table.public: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table.public: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_route_table.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Destroying... [id=nat-0d8fc0b7086636cf0][0m[0m
+[0m[1mmodule.vpc_dev.aws_subnet.private[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_route_table.private[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Destroying... [id=nat-0e90ece2ff4b1bb22][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Destroying... [id=nat-025d6f80cc2a07017][0m[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Still destroying... [id=nat-0d8fc0b7086636cf0, 00m10s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Still destroying... [id=nat-0e90ece2ff4b1bb22, 00m10s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Still destroying... [id=nat-025d6f80cc2a07017, 00m10s elapsed][0m[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Still destroying... [id=nat-0d8fc0b7086636cf0, 00m20s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Still destroying... [id=nat-0e90ece2ff4b1bb22, 00m20s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Still destroying... [id=nat-025d6f80cc2a07017, 00m20s elapsed][0m[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Still destroying... [id=nat-0d8fc0b7086636cf0, 00m30s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Still destroying... [id=nat-025d6f80cc2a07017, 00m30s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Still destroying... [id=nat-0e90ece2ff4b1bb22, 00m30s elapsed][0m[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Still destroying... [id=nat-0d8fc0b7086636cf0, 00m40s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Still destroying... [id=nat-025d6f80cc2a07017, 00m40s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Still destroying... [id=nat-0e90ece2ff4b1bb22, 00m40s elapsed][0m[0m
+[0m[1mmodule.vpc_dev.aws_nat_gateway.main[0]: Destruction complete after 41s[0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[0]: Destroying... [id=subnet-07e15a01089d90451][0m[0m
+[0m[1mmodule.vpc_dev.aws_eip.nat[0]: Destroying... [id=eipalloc-01e757084ec9bfa4b][0m[0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[1]: Destroying... [id=subnet-038b69e438ff2e9b6][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[0]: Destruction complete after 41s[0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_subnet.public[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_eip.nat[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_internet_gateway.main: Destroying... [id=igw-07c2214cf71caad64][0m[0m
+[0m[1mmodule.vpc_dev.aws_internet_gateway.main: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_dev.aws_vpc.main: Destroying... [id=vpc-0babc9b9892a5f426][0m[0m
+[0m[1mmodule.vpc_dev.aws_vpc.main: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Still destroying... [id=nat-0e90ece2ff4b1bb22, 00m50s elapsed][0m[0m
+[0m[1mmodule.vpc_prod.aws_nat_gateway.main[1]: Destruction complete after 51s[0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[1]: Destroying... [id=eipalloc-0886959edfba6e55b][0m[0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[0]: Destroying... [id=eipalloc-088094c851d469dfc][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[0]: Destroying... [id=subnet-0a9fdd590dd7d3c3e][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[1]: Destroying... [id=subnet-07964837d6ff62f7e][0m[0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_subnet.public[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[0]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_eip.nat[1]: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_internet_gateway.main: Destroying... [id=igw-02deb94d57808fce2][0m[0m
+[0m[1mmodule.vpc_prod.aws_internet_gateway.main: Destruction complete after 1s[0m
+[0m[1mmodule.vpc_prod.aws_vpc.main: Destroying... [id=vpc-04d4762f9a3362fc4][0m[0m
+[0m[1mmodule.vpc_prod.aws_vpc.main: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 31 destroyed.[0m
